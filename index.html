@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="موقع احترافي متكامل عن الأمن السيبراني والاستخدام الآمن للإنترنت - توعوي وتعليمي للمسابقات الوطنية.">
+  <meta name="keywords" content="الأمن السيبراني, إنترنت آمن, حماية البيانات, الخصوصية, كلمات المرور">
+  <meta name="author" content="Nour Hossam, Omar">
+  <title>CyberSafe | الأمن السيبراني والاستخدام الآمن للإنترنت</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- شاشة التحميل -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="orb"></div>
+      <p>جارٍ تجهيز تجربة الأمن السيبراني...</p>
+    </div>
+  </div>
+
+  <!-- شريط التقدم -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- رأس الموقع -->
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="التنقل الرئيسي">
+      <a class="logo" href="#hero">CyberSafe</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#concept">المفهوم</a></li>
+        <li><a href="#importance">الأهمية</a></li>
+        <li><a href="#state-efforts">جهود الدولة</a></li>
+        <li><a href="#passwords">كلمات المرور</a></li>
+        <li><a href="#games">الألعاب الإلكترونية</a></li>
+        <li><a href="#cyber">الأمن السيبراني</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#contact">تواصل</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn ghost" aria-pressed="false" aria-label="تبديل الوضع الليلي">🌙</button>
+        <button id="menuToggle" class="btn ghost" aria-label="فتح القائمة">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- القسم الرئيسي -->
+  <section id="hero" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="eyebrow">منصة توعوية متقدمة</p>
+        <h1>الأمن السيبراني والاستخدام الآمن للإنترنت</h1>
+        <p>
+          تجربة رقمية حديثة تجمع بين الجمال البصري، المعرفة العميقة، والأدوات التفاعلية
+          لحماية المجتمع الرقمي وبناء مستقبل أكثر أمانًا.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#concept">ابدأ الجولة</a>
+          <a class="btn outline" href="#quiz">اختبر معرفتك</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="counter" data-target="98">0</span>
+            <span>نسبة وعي رقمي</span>
+          </div>
+          <div class="stat">
+            <span class="counter" data-target="120">0</span>
+            <span>معلومة توعوية</span>
+          </div>
+          <div class="stat">
+            <span class="counter" data-target="24">0</span>
+            <span>أداة تفاعلية</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="glass-panel">
+          <h3>لوحة قيادة الأمن</h3>
+          <ul>
+            <li>مراقبة التهديدات الحية</li>
+            <li>إرشادات حماية فورية</li>
+            <li>خطط استجابة ذكية</li>
+          </ul>
+          <div class="progress">
+            <span>جاهزية الحماية</span>
+            <div class="progress-bar"><span style="width: 82%"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- شريط الخدمات -->
+  <section class="floating-cards">
+    <div class="container grid-3">
+      <div class="info-card" data-animate>
+        <span class="icon">🛡️</span>
+        <h3>حماية متعددة الطبقات</h3>
+        <p>منهجية تجمع بين التقنية والسلوك لتقليل المخاطر بشكل فعّال.</p>
+      </div>
+      <div class="info-card" data-animate>
+        <span class="icon">🌐</span>
+        <h3>إنترنت أكثر ثقة</h3>
+        <p>نُظم توعوية لتعزيز الخصوصية والاستخدام المسؤول للتقنيات.</p>
+      </div>
+      <div class="info-card" data-animate>
+        <span class="icon">⚡</span>
+        <h3>استجابة سريعة</h3>
+        <p>خطط جاهزة للتعامل مع الحوادث الرقمية بأقل تأثير.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- مفهوم الإنترنت الآمن -->
+  <section id="concept" class="section concept">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">تعريف أساسي</p>
+        <h2>ما هو مفهوم الإنترنت الآمن</h2>
+        <p>الإنترنت الآمن هو بيئة رقمية تحمي الهوية، الخصوصية، والبيانات من الوصول غير المصرح به.</p>
+      </div>
+      <div class="grid-2">
+        <div class="glass-panel" data-animate>
+          <h3>ركائز المفهوم</h3>
+          <ul class="bullets">
+            <li>التشفير وحماية البيانات أثناء النقل.</li>
+            <li>إدارة الهوية والتحكم في الصلاحيات.</li>
+            <li>الوعي بالتهديدات الرقمية المتغيرة.</li>
+            <li>القوانين والسياسات التي تنظم الاستخدام.</li>
+          </ul>
+          <p class="tip">نصيحة واقعية: فعّل المصادقة الثنائية لكل حساب مهم.</p>
+        </div>
+        <div class="neo-panel" data-animate>
+          <h3>كيف يظهر ذلك؟</h3>
+          <p>
+            عندما تدخل موقعًا يستخدم HTTPS، أو تتلقى تنبيهًا عند محاولة تسجيل دخول مشبوهة،
+            فهذه مؤشرات على بيئة إنترنت آمنة.
+          </p>
+          <div class="pill-grid">
+            <span>حماية الهوية</span>
+            <span>سلامة الأجهزة</span>
+            <span>سلامة البيانات</span>
+            <span>ثقة المستخدم</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- أهمية الإنترنت الآمن -->
+  <section id="importance" class="section importance">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">لماذا نهتم؟</p>
+        <h2>أهمية استخدام إنترنت آمن</h2>
+        <p>كل نشاط رقمي يحتاج حماية لضمان استمرار التعليم، العمل، والتواصل بدون مخاطر.</p>
+      </div>
+      <div class="timeline" data-animate>
+        <div class="timeline-item">
+          <span class="icon">📚</span>
+          <div>
+            <h3>حماية التعليم الرقمي</h3>
+            <p>المنصات التعليمية تحتاج بيئة آمنة لضمان خصوصية الطلبة والمحتوى.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="icon">💳</span>
+          <div>
+            <h3>أمان المعاملات المالية</h3>
+            <p>التسوق والخدمات البنكية تتطلب ضوابط قوية لمنع الاحتيال.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="icon">🤝</span>
+          <div>
+            <h3>تعزيز الثقة الاجتماعية</h3>
+            <p>المجتمع الرقمي الآمن يقلل الشائعات والتلاعب بالمعلومات.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- جهود الدولة -->
+  <section id="state-efforts" class="section state">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">منظومة وطنية</p>
+        <h2>جهود الدولة في استخدام الإنترنت الآمن</h2>
+        <p>الجهود الحكومية تتكامل مع المجتمع لضمان فضاء رقمي مستدام.</p>
+      </div>
+      <div class="grid-3">
+        <div class="info-card" data-animate>
+          <span class="icon">🏛️</span>
+          <h3>تشريعات وسياسات</h3>
+          <p>سن قوانين لحماية البيانات، ومكافحة الجرائم الإلكترونية.</p>
+          <ul class="bullets">
+            <li>قوانين حماية البيانات الشخصية.</li>
+            <li>لوائح مكافحة الجرائم الرقمية.</li>
+            <li>سياسات مشاركة البيانات الآمنة.</li>
+          </ul>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🧠</span>
+          <h3>برامج توعوية</h3>
+          <p>حملات إعلامية وتعليمية لرفع وعي المواطنين.</p>
+          <ul class="bullets">
+            <li>ورش عمل للطلاب والمعلمين.</li>
+            <li>منصات محتوى تفاعلي.</li>
+            <li>أيام وطنية للأمن السيبراني.</li>
+          </ul>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🛰️</span>
+          <h3>مراكز استجابة</h3>
+          <p>إنشاء فرق مختصة للاستجابة للحوادث الرقمية.</p>
+          <ul class="bullets">
+            <li>مراقبة التهديدات على مدار الساعة.</li>
+            <li>إرشادات فورية للقطاعات الحيوية.</li>
+            <li>شراكات مع القطاع الخاص.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- كلمات المرور والخصوصية -->
+  <section id="passwords" class="section passwords">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">خط الدفاع الأول</p>
+        <h2>استخدام كلمات المرور القوية والخصوصية</h2>
+        <p>كلمة المرور الجيدة وسلوك الخصوصية الذكي يحدان من الاختراقات.</p>
+      </div>
+      <div class="grid-2">
+        <div class="glass-panel" data-animate>
+          <h3>معايير كلمة مرور قوية</h3>
+          <ul class="bullets">
+            <li>طول لا يقل عن 12 حرفًا.</li>
+            <li>مزيج بين الحروف والأرقام والرموز.</li>
+            <li>عدم استخدام معلومات شخصية.</li>
+            <li>تغيير دوري ومراقبة التسريبات.</li>
+          </ul>
+          <p class="tip">نصيحة: استخدم مدير كلمات مرور موثوق لتوليد كلمات قوية.</p>
+        </div>
+        <div class="neo-panel" data-animate>
+          <h3>الخصوصية الذكية</h3>
+          <div class="toggle-list">
+            <div>
+              <h4>تحكم في الصلاحيات</h4>
+              <p>راجع إذونات التطبيقات باستمرار وأوقف غير الضروري.</p>
+            </div>
+            <div>
+              <h4>تصفّح خفي</h4>
+              <p>استخدم وضع الخصوصية عند مشاركة الأجهزة.</p>
+            </div>
+            <div>
+              <h4>تنبيهات الدخول</h4>
+              <p>فعّل التنبيهات لأي نشاط تسجيل دخول جديد.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الألعاب الإلكترونية -->
+  <section id="games" class="section games">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">الألعاب الإلكترونية</p>
+        <h2>كيفية التعامل معها، مخاطرها، وتأثيرها الصحي</h2>
+        <p>الألعاب الإلكترونية ممتعة لكنها تحتاج إدارة واعية للوقت والأمان.</p>
+      </div>
+      <div class="grid-3">
+        <div class="info-card" data-animate>
+          <span class="icon">🎮</span>
+          <h3>كيفية التعامل معها</h3>
+          <ul class="bullets">
+            <li>تحديد وقت يومي للعب.</li>
+            <li>الالتزام بتصنيف الفئة العمرية.</li>
+            <li>الموازنة بين اللعب والدراسة.</li>
+          </ul>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">⚠️</span>
+          <h3>مخاطر الألعاب الإلكترونية</h3>
+          <ul class="bullets">
+            <li>التعرض للاحتيال داخل الألعاب.</li>
+            <li>التواصل مع مجهولين.</li>
+            <li>شراء عناصر غير ضرورية.</li>
+          </ul>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🧘</span>
+          <h3>التأثير على الصحة</h3>
+          <ul class="bullets">
+            <li>الإجهاد البصري والبدني.</li>
+            <li>اضطرابات النوم.</li>
+            <li>العزلة الاجتماعية عند الإفراط.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slider" data-animate>
+        <button class="slider-btn" id="prevSlide" aria-label="السابق">❮</button>
+        <div class="slides" id="slides">
+          <div class="slide">
+            <h3>نصيحة ذهبية</h3>
+            <p>ضع شاشة اللعب في مكان مفتوح لمراقبة المحتوى والتواصل.</p>
+          </div>
+          <div class="slide">
+            <h3>إعدادات أمان</h3>
+            <p>فعّل الرقابة الأبوية وقيود الدردشة داخل الألعاب.</p>
+          </div>
+          <div class="slide">
+            <h3>راحة صحية</h3>
+            <p>طبّق قاعدة 20-20-20 لحماية العينين.</p>
+          </div>
+        </div>
+        <button class="slider-btn" id="nextSlide" aria-label="التالي">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- حماية من السرقة الرقمية -->
+  <section id="digital-theft" class="section theft">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">حماية الهوية</p>
+        <h2>كيفية حماية نفسك من السرقة الرقمية</h2>
+        <p>السرقة الرقمية تستهدف الحسابات والبيانات الشخصية عبر أساليب متعددة.</p>
+      </div>
+      <div class="grid-2">
+        <div class="glass-panel" data-animate>
+          <h3>أهم الإجراءات</h3>
+          <ul class="bullets">
+            <li>عدم مشاركة الأكواد أو كلمات المرور.</li>
+            <li>تفعيل المصادقة الثنائية.</li>
+            <li>مراقبة الحسابات البنكية بشكل دوري.</li>
+            <li>تجنب الشبكات العامة بدون VPN.</li>
+          </ul>
+        </div>
+        <div class="neo-panel" data-animate>
+          <h3>مؤشرات خطر</h3>
+          <p>احذر عند ظهور إشعارات تسجيل دخول من أماكن غير معتادة أو رسائل تطلب بيانات شخصية.</p>
+          <div class="pill-grid">
+            <span>رسائل مشبوهة</span>
+            <span>طلبات مالية</span>
+            <span>روابط مجهولة</span>
+            <span>تحديثات مفاجئة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- حماية الأجهزة -->
+  <section id="devices" class="section devices">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">الأجهزة أولًا</p>
+        <h2>طرق حماية أجهزتنا</h2>
+        <p>الجهاز الآمن يمنع تسرب البيانات ويقلل فرص الاختراق.</p>
+      </div>
+      <div class="grid-3">
+        <div class="info-card" data-animate>
+          <span class="icon">🔒</span>
+          <h3>التحديثات الدورية</h3>
+          <p>تحديثات النظام تغلق الثغرات الأمنية بشكل مستمر.</p>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🧹</span>
+          <h3>تنظيف التطبيقات</h3>
+          <p>احذف التطبيقات غير المستخدمة التي قد تجمع بياناتك.</p>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🧬</span>
+          <h3>مكافحة البرمجيات الخبيثة</h3>
+          <p>استخدم برامج موثوقة لفحص الجهاز بانتظام.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشركات وحماية البيانات -->
+  <section id="companies" class="section companies">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">اقتصاد رقمي</p>
+        <h2>أسباب حاجة الشركات إلى حماية بياناتها</h2>
+        <p>البيانات هي رأس مال الشركات، وحمايتها ضرورة استراتيجية.</p>
+      </div>
+      <div class="grid-2">
+        <div class="neo-panel" data-animate>
+          <h3>الأسباب الرئيسية</h3>
+          <ul class="bullets">
+            <li>حماية السمعة والثقة لدى العملاء.</li>
+            <li>الامتثال للمعايير والقوانين.</li>
+            <li>تقليل الخسائر المالية الناتجة عن الاختراق.</li>
+            <li>استمرارية الأعمال دون توقف.</li>
+          </ul>
+        </div>
+        <div class="glass-panel" data-animate>
+          <h3>توصيات عملية</h3>
+          <p>اعتماد سياسات النسخ الاحتياطي، وتدريب الموظفين على الوعي الرقمي.</p>
+          <div class="pill-grid">
+            <span>نسخ احتياطي</span>
+            <span>تشفير البيانات</span>
+            <span>اختبارات اختراق</span>
+            <span>مراكز استجابة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تجنب الخداع -->
+  <section id="fraud" class="section fraud">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">احذر الخداع</p>
+        <h2>تجنب الخداع عبر الإنترنت</h2>
+        <p>المحتالون يستخدمون أساليب نفسية وتقنية لخداع المستخدمين.</p>
+      </div>
+      <div class="grid-3">
+        <div class="info-card" data-animate>
+          <span class="icon">📧</span>
+          <h3>التصيد الاحتيالي</h3>
+          <p>رسائل تبدو رسمية لكنها تهدف لسرقة بياناتك.</p>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🧾</span>
+          <h3>العروض الوهمية</h3>
+          <p>عروض مبالغ فيها مقابل بيانات أو تحويل مالي.</p>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">👤</span>
+          <h3>انتحال الهوية</h3>
+          <p>حسابات مزيفة تتقمص شخصيات معروفة.</p>
+        </div>
+      </div>
+      <div class="glass-panel" data-animate>
+        <h3>قائمة تحقق سريعة</h3>
+        <ul class="bullets">
+          <li>تحقق من عنوان البريد والرابط.</li>
+          <li>لا تشارك معلومات حساسة عبر الرسائل.</li>
+          <li>استخدم منصات الدفع الرسمية فقط.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- الأمن السيبراني -->
+  <section id="cyber" class="section cyber">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">المنظومة الرقمية</p>
+        <h2>الأمن السيبراني</h2>
+        <p>مجال شامل لحماية الأنظمة والشبكات والبرمجيات من الهجمات.</p>
+      </div>
+      <div class="grid-2">
+        <div class="glass-panel" data-animate>
+          <h3>عناصر الأمن السيبراني</h3>
+          <ul class="bullets">
+            <li>السرية: حماية البيانات من الوصول غير المصرح.</li>
+            <li>السلامة: منع التلاعب بالمعلومات.</li>
+            <li>الإتاحة: ضمان الوصول للخدمات عند الحاجة.</li>
+            <li>المصداقية: توثيق الهوية والتحقق المستمر.</li>
+          </ul>
+        </div>
+        <div class="neo-panel" data-animate>
+          <h3>أنواع تهديدات الأمن السيبراني</h3>
+          <div class="pill-grid">
+            <span>البرمجيات الخبيثة</span>
+            <span>هجمات الحرمان من الخدمة</span>
+            <span>الهندسة الاجتماعية</span>
+            <span>اختراق الحسابات</span>
+            <span>ثغرات يوم الصفر</span>
+            <span>التنصت</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ضمان الأمان -->
+  <section id="secure-online" class="section secure-online">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">كيف نضمن؟</p>
+        <h2>كيفية ضمان الأمان عبر الإنترنت</h2>
+        <p>الالتزام بالعادات الرقمية الصحيحة يحميك في كل منصة.</p>
+      </div>
+      <div class="grid-3">
+        <div class="info-card" data-animate>
+          <span class="icon">🗺️</span>
+          <h3>خطة حماية شخصية</h3>
+          <p>ضع خطة لإدارة حساباتك وأجهزتك بشكل دوري.</p>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🧪</span>
+          <h3>اختبارات أمنية</h3>
+          <p>راقب إعدادات الخصوصية وقم بمراجعتها كل شهر.</p>
+        </div>
+        <div class="info-card" data-animate>
+          <span class="icon">🤖</span>
+          <h3>أدوات ذكية</h3>
+          <p>استفد من أدوات الحماية الذكية والتنبيهات المبكرة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- إحصائيات -->
+  <section class="section stats" aria-label="إحصائيات تفاعلية">
+    <div class="container stats-grid">
+      <div class="stat-card" data-animate>
+        <h3 class="counter" data-target="450">0</h3>
+        <p>حالة توعية سنوية</p>
+      </div>
+      <div class="stat-card" data-animate>
+        <h3 class="counter" data-target="87">0</h3>
+        <p>مبادرة حكومية وشراكة</p>
+      </div>
+      <div class="stat-card" data-animate>
+        <h3 class="counter" data-target="65">0</h3>
+        <p>أداة حماية موصى بها</p>
+      </div>
+      <div class="stat-card" data-animate>
+        <h3 class="counter" data-target="92">0</h3>
+        <p>نسبة رضا المستخدمين</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- اختبار تفاعلي -->
+  <section id="quiz" class="section quiz">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">اختبر نفسك</p>
+        <h2>اختبار الأمن السيبراني التفاعلي</h2>
+        <p>أجب على الأسئلة لمعرفة مستوى وعيك الرقمي.</p>
+      </div>
+      <div class="quiz-card" data-animate>
+        <div id="quizQuestion">ما هو أفضل إجراء عند استلام رسالة بريد مشبوهة؟</div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <button class="btn primary" id="nextQuestion">السؤال التالي</button>
+        <p id="quizResult" class="quiz-result" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- الأسئلة الشائعة -->
+  <section id="faq" class="section faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">أسئلة مهمة</p>
+        <h2>الأسئلة الشائعة</h2>
+      </div>
+      <div class="faq-list" data-animate>
+        <button class="faq-item" aria-expanded="false">
+          <span>هل يكفي استخدام كلمة مرور قوية فقط؟</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">لا، يجب أيضًا تفعيل المصادقة الثنائية ومراقبة الحسابات.</div>
+
+        <button class="faq-item" aria-expanded="false">
+          <span>كيف أعرف أن الرابط آمن؟</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">افحص البروتوكول HTTPS وتأكد من اسم النطاق الصحيح.</div>
+
+        <button class="faq-item" aria-expanded="false">
+          <span>هل الشبكات العامة خطيرة؟</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">نعم، يفضل استخدام VPN وعدم إدخال بيانات حساسة.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- من نحن -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">فريق المشروع</p>
+        <h2>About Us</h2>
+        <p>فريق شغوف بنشر الثقافة السيبرانية بأسلوب عصري.</p>
+      </div>
+      <div class="grid-2">
+        <div class="team-card" data-animate>
+          <!-- Replace with my image -->
+          <img src="nour.jpg" alt="صورة نور حسام">
+          <h3>Nour Hossam</h3>
+          <p>"الشخص الذي صورته بخلفية بحر هو نور حسام – صاحب المشروع والمسؤول عن تصميم الموقع ومحتوى الأمن السيبراني."</p>
+        </div>
+        <div class="team-card" data-animate>
+          <!-- Replace with friend image -->
+          <img src="omar.jpg" alt="صورة عمر">
+          <h3>Omar</h3>
+          <p>"الشخص الذي يرتدي تيشيرت أحمر هو عمر – شريك في المشروع ومشارك في إعداد المحتوى والتنسيق."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- التواصل -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">ابق على تواصل</p>
+        <h2>نموذج التواصل</h2>
+        <p>شاركنا استفساراتك أو مقترحاتك لتحسين ثقافة الأمن الرقمي.</p>
+      </div>
+      <form class="contact-form" data-animate>
+        <label>
+          الاسم الكامل
+          <input type="text" name="name" placeholder="اكتب اسمك" required>
+        </label>
+        <label>
+          البريد الإلكتروني
+          <input type="email" name="email" placeholder="example@mail.com" required>
+        </label>
+        <label>
+          رسالتك
+          <textarea name="message" rows="5" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">إرسال الرسالة</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- التذييل -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>CyberSafe</h3>
+        <p>منصة توعوية متقدمة لتعزيز الأمن السيبراني والاستخدام الآمن للإنترنت.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#concept">المفهوم</a></li>
+          <li><a href="#games">الألعاب الإلكترونية</a></li>
+          <li><a href="#quiz">الاختبار</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تابعنا</h4>
+        <p>Instagram • X • LinkedIn</p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 جميع الحقوق محفوظة لفريق CyberSafe.</p>
+  </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button id="backToTop" class="back-to-top" aria-label="العودة للأعلى">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

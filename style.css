@@ -1,0 +1,607 @@
+/* إعدادات الألوان الافتراضية للوضع الداكن */
+:root {
+  --bg: #0b0f1f;
+  --bg-alt: #10162b;
+  --card: rgba(255, 255, 255, 0.08);
+  --card-strong: rgba(255, 255, 255, 0.12);
+  --text: #f5f7ff;
+  --muted: #b8c0e0;
+  --primary: #6c5ce7;
+  --secondary: #00d2ff;
+  --accent: #ff9f1c;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  --radius: 18px;
+  --glass: blur(20px);
+}
+
+/* إعدادات الألوان للوضع الفاتح */
+[data-theme="light"] {
+  --bg: #f4f6ff;
+  --bg-alt: #ffffff;
+  --card: rgba(255, 255, 255, 0.7);
+  --card-strong: rgba(255, 255, 255, 0.9);
+  --text: #14162b;
+  --muted: #4d5875;
+  --primary: #3b49df;
+  --secondary: #00b8d9;
+  --accent: #ff6b6b;
+  --shadow: 0 20px 40px rgba(35, 50, 80, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* إعدادات الصفحة الأساسية */
+body {
+  font-family: "IBM Plex Sans Arabic", "Changa", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* أقسام المحتوى الرئيسية */
+.section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(108, 92, 231, 0.25), transparent 55%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Changa", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+}
+
+p {
+  color: var(--muted);
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn.outline {
+  border: 1px solid var(--secondary);
+  color: var(--text);
+  background: transparent;
+}
+
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* شريط التنقل العلوي */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: var(--glass);
+  background: rgba(10, 14, 30, 0.8);
+}
+
+.site-header.scrolled {
+  box-shadow: var(--shadow);
+  background: rgba(10, 14, 30, 0.9);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 4%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: var(--muted);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* القسم الرئيسي مع خلفية متدرجة وتأثيرات */
+.hero {
+  position: relative;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(108, 92, 231, 0.35), transparent 50%),
+    linear-gradient(120deg, rgba(0, 210, 255, 0.12), transparent 60%);
+  z-index: -1;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text p {
+  margin: 20px 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-stats .stat {
+  background: var(--card);
+  padding: 16px 20px;
+  border-radius: 16px;
+  backdrop-filter: var(--glass);
+}
+
+/* بطاقة ثلاثية الأبعاد في الهيرو */
+.hero-card {
+  perspective: 1000px;
+}
+
+/* بطاقات زجاجية ونيومورفيزم */
+.glass-panel,
+.neo-panel {
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.neo-panel {
+  background: var(--card-strong);
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.25), inset -6px -6px 12px rgba(255, 255, 255, 0.1);
+}
+
+.progress {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.15);
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+}
+
+.floating-cards {
+  padding: 40px 0 20px;
+}
+
+.grid-2,
+.grid-3 {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.info-card {
+  background: var(--card);
+  padding: 22px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.bullets {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.bullets li::before {
+  content: "✦";
+  color: var(--secondary);
+  margin-left: 8px;
+}
+
+.tip {
+  margin-top: 18px;
+  background: rgba(0, 210, 255, 0.12);
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.pill-grid span {
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.timeline {
+  display: grid;
+  gap: 24px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+}
+
+/* السلايدر التفاعلي */
+.slider {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.slides {
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  background: var(--card);
+  padding: 24px;
+  border-radius: var(--radius);
+  transition: transform 0.5s ease;
+}
+
+.slider-btn {
+  background: var(--card-strong);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.stats {
+  background: var(--bg-alt);
+}
+
+.stats-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stat-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.quiz-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.quiz-options button {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quiz-options button:hover,
+.quiz-options button.active {
+  background: rgba(0, 210, 255, 0.25);
+}
+
+.quiz-result {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.faq-item[aria-expanded="true"] + .faq-answer {
+  display: block;
+}
+
+.team-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text);
+}
+
+.footer {
+  background: var(--bg-alt);
+  padding: 60px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.footer ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+/* شريط تقدم التمرير */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  width: 0;
+  z-index: 20;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  color: white;
+  display: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+/* شاشة التحميل */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.orb {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--secondary), var(--primary));
+  animation: pulse 1.6s infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 16px;
+    background: var(--bg-alt);
+    flex-direction: column;
+    padding: 20px;
+    border-radius: var(--radius);
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    flex-direction: column;
+  }
+
+  .back-to-top {
+    left: 12px;
+  }
+}
+.hero-card .glass-panel {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.hero-card .glass-panel:hover {
+  transform: rotateY(-6deg) rotateX(4deg) translateY(-6px);
+}
