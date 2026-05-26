@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body { @apply bg-black text-slate-100 antialiased; }
+
+.glass { @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl; }
+.section { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-20; }
+.neon-text { text-shadow: 0 0 24px rgba(56,189,248,.7); }
